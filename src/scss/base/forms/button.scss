@@ -3,14 +3,17 @@
 
 .button {
   display: inline-block;
+
   font-family: Lato;
   font-weight: 500;
   line-height: math.div(22, 18);
   padding: rem(21) rem(25);
   background-color: #23b123;
   border-radius: rem(10);
-  height: rem(64);
   transition: all 0.3s ease 0s;
+  @media (max-width: $tablet) {
+    min-width: rem(142);
+  }
   @media (any-hover: hover) {
     &:hover {
       background-color: #0e620e;
@@ -31,5 +34,11 @@
 
   &._fw {
     width: 100%;
+  }
+  @media (max-width: $tablet) {
+    padding: rem(10) rem(13);
+    &_border {
+      padding: rem(9) rem(13);
+    }
   }
 }
